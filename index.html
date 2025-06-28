@@ -1,102 +1,243 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ben Enes Yıldırım - Portföy</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex-grow: 1; /* içeriğin büyümesini sağlar, footer aşağıda kalır */
+    }
+    header {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    header h1 img {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Ana link kartları */
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .link-card {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      min-width: 220px;
+      transition: transform 0.2s;
+    }
+    .link-card:hover {
+      transform: translateY(-5px);
+    }
+    .link-card h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .link-card a {
+      text-decoration: none;
+      color: #0078d7;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    .link-card a:hover {
+      color: #005ea3;
+    }
+
+    /* Uygulamalar listesi */
+    .apps-list {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
+    }
+    .app-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: box-shadow 0.2s;
+    }
+    .app-card:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .app-info {
+      flex-grow: 1;
+    }
+    .app-info h3 {
+      margin: 0 0 0.3rem 0;
+      font-size: 1.4rem;
+      color: #222;
+    }
+    .app-info p {
+      margin: 0 0 0.5rem 0;
+      color: #555;
+    }
+    .app-info a {
+      color: #0078d7;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s;
+    }
+    .app-info a:hover {
+      color: #005ea3;
+    }
+    .app-info a svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: auto; /* footer'u en alta iter */
+      background: #fff; /* opsiyonel, footer arka planı */
+      box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="tr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Ben Enes Yıldırım - Portföy&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Segoe UI', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f4f4f4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #1e1e1e;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.links {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 2rem 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.link-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 8px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-width: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.link-card:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-5px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.link-card a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #0078d7;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Ben Enes Yıldırım&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Android Geliştirici &amp; GitHub Kullanıcısı&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="link-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Google Play&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://play.google.com/store/apps/dev?id=5520947670843912820" target="_blank"&gt;Uygulamalarımı Gör&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="link-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;GitHub&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://github.com/benenesyildirim" target="_blank"&gt;Projelerime Göz At&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>© 2025 Ben Enes Yıldırım. Tüm hakları saklıdır.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <header>
+    <h1>
+      <img src="https://play-lh.googleusercontent.com/0-5up9iKM6z_VCqWb7trKYUq8b36HihM9vlWahi45KrvJ7nTz4iPgp0h-F6nFeNITxI=s94" alt="Profil Resmi" />
+      Ben Enes Yıldırım
+    </h1>
+    <p>Senior Android Developer</p>
+  </header>
+
+  <main>
+    <section class="links">
+    <!-- Google Play ve GitHub linkleri burası aynı kalacak -->
+    <div class="link-card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#34A853" aria-hidden="true">
+          <path d="M3.545 2.285a1.503 1.503 0 00-1.496 1.497v16.436a1.5 1.5 0 002.315 1.271l11.406-8.06-12.225-11.145zM14.544 12l-2.18 1.225-3.2-3.2 5.38-3.03L21.384 12l-6.84 3.68z" />
+        </svg>
+        Google Play
+      </h2>
+      <a href="https://play.google.com/store/apps/dev?id=5520947670843912820" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#34A853" aria-hidden="true" style="width: 18px; height: 18px;">
+          <path d="M3.545 2.285a1.503 1.503 0 00-1.496 1.497v16.436a1.5 1.5 0 002.315 1.271l11.406-8.06-12.225-11.145zM14.544 12l-2.18 1.225-3.2-3.2 5.38-3.03L21.384 12l-6.84 3.68z" />
+        </svg>
+        Explore Apps
+      </a>
+    </div>
+
+    <div class="link-card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" aria-hidden="true">
+          <path d="M12 0C5.372 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.082-.729.082-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.107-.775.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.468-2.38 1.236-3.22-.124-.304-.536-1.527.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.047.138 3.003.403 2.292-1.553 3.298-1.23 3.298-1.23.655 1.65.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.922.43.37.823 1.1.823 2.222 0 1.606-.015 2.9-.015 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
+        GitHub
+      </h2>
+      <a href="https://github.com/benenesyildirim" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" aria-hidden="true" style="width: 18px; height: 18px;">
+          <path d="M12 0C5.372 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.082-.729.082-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.107-.775.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.468-2.38 1.236-3.22-.124-.304-.536-1.527.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.047.138 3.003.403 2.292-1.553 3.298-1.23 3.298-1.23.655 1.65.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.922.43.37.823 1.1.823 2.222 0 1.606-.015 2.9-.015 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
+        Browse My Projects
+      </a>
+    </div>
+  </section>
+
+    <section class="apps-list" aria-label="Uygulamalar">
+    <div class="app-card">
+      <img class="app-icon" src="https://play-lh.googleusercontent.com/cEA0dYpZsfIRetlA1o_sJuvhaUoyAJjIoe0XWL99ARI_YyWcjC6dqXpsDYwUg1fVYA=w240-h480" alt="Real Bond Uygulama İkonu" />
+      <div class="app-info">
+        <h3>The Real Bond</h3>
+        <p>A game for calculating The Real Bond with your friends.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.benenesyildirim.realbond" target="_blank" rel="noopener noreferrer">
+          See on Google Play Store
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <img class="app-icon" src="https://play-lh.googleusercontent.com/Ni2LmH1StltauU4Du1YE4twtGxJWtELLqyrGdzTAKh7QFEkIxFcHLUOeGpFoz0OAARk=w240-h480" alt="Whats My Body Type Uygulama İkonu" />
+      <div class="app-info">
+        <h3>Learn Your Body Type</h3>
+        <p>Learn your body type just in 5 minutes !</p>
+        <a href="https://play.google.com/store/apps/details?id=com.benenesyildirim.whatsmybodytype" target="_blank" rel="noopener noreferrer">
+          See on Google Play Store
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    © 2025 Enes Yıldırım. All rights reserved.
+  </footer>
+
 </body>
 </html>
